@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Access Center - Job Summary</title>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --border-gray: #dee2e6;
+            --bg-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Container Mockup Browser/Sistem */
+        .browser-mockup {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* Header Navigasi Atas */
+        .system-header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .district-name {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Logo Sekolah Placeholder */
+        .district-logo-placeholder {
+            width: 30px; height: 30px; background: white; border-radius: 50%; margin-right: 10px;
+            display: flex; align-items: center; justify-content: center; color: var(--primary-blue); font-weight: 900;
+        }
+
+        .user-nav { font-size: 13px; }
+        .user-nav span { margin-left: 15px; cursor: pointer; opacity: 0.8; }
+
+        /* Navigasi Breadcrumb */
+        .breadcrumb {
+            background: #f0f2f5;
+            padding: 10px 20px;
+            border-bottom: 1px solid var(--border-gray);
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* Area Konten Utama */
+        .main-content {
+            padding: 30px;
+        }
+
+        .page-title {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            border-bottom: 3px solid var(--primary-blue);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Tab Menu */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-gray);
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            color: var(--primary-blue);
+        }
+        .tab.active {
+            border: 1px solid var(--border-gray);
+            border-bottom-color: white;
+            background: white;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: -1px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        /* Tabel Data */
+        .data-panel {
+            border: 1px solid var(--border-gray);
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .panel-header {
+            background: var(--bg-gray);
+            padding: 10px 15px;
+            font-weight: bold;
+            border-bottom: 1px solid var(--border-gray);
+        }
+        .panel-body { padding: 20px; }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table th, .info-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .info-table th {
+            width: 30%;
+            color: #666;
+            font-weight: normal;
+            background-color: #fafafa;
+        }
+        .info-table td {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .status-active {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            display: inline-block;
+        }
+
+        /* Footer Sistem */
+        .system-footer {
+            padding: 15px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid var(--border-gray);
+            font-size: 11px;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Print Style */
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .browser-mockup { box-shadow: none; max-width: 100%; border: none; }
+            .breadcrumb, .user-nav { display: none; }
+            .system-header { padding: 10px 20px; background: white !important; color: black !important; border-bottom: 2px solid black; }
+            .district-logo-placeholder { border: 2px solid black; color: black; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="browser-mockup">
+    <div class="system-header">
+        <div class="district-name">
+            <div class="district-logo-placeholder">SD</div>
+            Springfield School District - Employee Access Center
+        </div>
+        <div class="user-nav">
+            Welcome, <span id="topName">Sarah J. Connor</span> | My Account | Sign Out
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        Home > Employee Self Service > Employment > Current Assignment Information
+    </div>
+
+    <div class="main-content">
+        <h1 class="page-title">Current Job Summary & Verification</h1>
+
+        <div class="tabs">
+            <div class="tab active">Assignment Details</div>
+            <div class="tab">Compensation History</div>
+            <div class="tab">Certifications</div>
+        </div>
+
+        <div class="data-panel">
+            <div class="panel-header">Employee Information</div>
+            <div class="panel-body">
+                <table class="info-table">
+                    <tr>
+                        <th>Employee Name:</th>
+                        <td id="mainName" style="font-size: 16px;">Sarah J. Connor</td>
+                    </tr>
+                    <tr>
+                        <th>Employee ID:</th>
