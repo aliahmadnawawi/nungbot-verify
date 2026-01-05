@@ -94,7 +94,7 @@ playwright install chromium
 
 ### 3. Konfigurasi Environment
 
-Salin env.example menjadi .env dan isi konfigurasi:
+Ubah isi file .env dan isi konfigurasi punya Anda:
 
 BOT_TOKEN=your_bot_token_here  
 CHANNEL_USERNAME=your_channel  
