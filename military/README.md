@@ -20,6 +20,8 @@ Informasi Permintaan:
 }
 
 Contoh Respons:
+
+```json
 {
     "verificationId": "{verification_id}",
     "currentStep": "collectInactiveMilitaryPersonalInfo",
@@ -33,6 +35,7 @@ Contoh Respons:
     "submissionUrl": "https://services.sheerid.com/rest/v2/verification/{verification_id}/step/collectInactiveMilitaryPersonalInfo",
     "instantMatchAttempts": 0
 }
+```
 
 Field Kunci:
 - submissionUrl: URL pengiriman yang akan digunakan pada langkah berikutnya
@@ -49,6 +52,8 @@ Informasi Permintaan:
   Contoh: https://services.sheerid.com/rest/v2/verification/{verificationId}/step/collectInactiveMilitaryPersonalInfo
 - Metode: POST
 - Parameter:
+
+```json
 {
     "firstName": "nama",
     "lastName": "nama",
@@ -70,6 +75,7 @@ Informasi Permintaan:
         "submissionOptIn": "Dengan mengirimkan informasi pribadi di atas, saya menyatakan bahwa informasi pribadi saya dikumpulkan berdasarkan kebijakan privasi OpenAI dan saya memahami bahwa informasi pribadi saya akan dibagikan kepada SheerID sebagai pemroses / penyedia layanan pihak ketiga untuk memverifikasi kelayakan saya atas penawaran khusus. Untuk bantuan lebih lanjut, silakan hubungi OpenAI Support di support@openai.com"
     }
 }
+```
 
 Penjelasan Field Kunci:
 - firstName: Nama depan
@@ -87,50 +93,64 @@ Penjelasan Field Kunci:
 
 ## 🎖️ Daftar Organisasi Militer (Organization)
 
+```json
 [
     {
         "id": 4070,
         "idExtended": "4070",
         "name": "Army",
         "country": "US",
-        "type": "MILITARY"
+        "type": "MILITARY",
+        "latitude": 39.7837304,
+        "longitude": -100.445882
     },
     {
         "id": 4073,
         "idExtended": "4073",
         "name": "Air Force",
         "country": "US",
-        "type": "MILITARY"
+        "type": "MILITARY",
+        "latitude": 39.7837304,
+        "longitude": -100.445882
     },
     {
         "id": 4072,
         "idExtended": "4072",
         "name": "Navy",
         "country": "US",
-        "type": "MILITARY"
+        "type": "MILITARY",
+        "latitude": 39.7837304,
+        "longitude": -100.445882
     },
     {
         "id": 4071,
         "idExtended": "4071",
         "name": "Marine Corps",
         "country": "US",
-        "type": "MILITARY"
+        "type": "MILITARY",
+        "latitude": 39.7837304,
+        "longitude": -100.445882
     },
     {
         "id": 4074,
         "idExtended": "4074",
         "name": "Coast Guard",
         "country": "US",
-        "type": "MILITARY"
+        "type": "MILITARY",
+        "latitude": 39.7837304,
+        "longitude": -100.445882
     },
     {
         "id": 4544268,
         "idExtended": "4544268",
         "name": "Space Force",
         "country": "US",
-        "type": "MILITARY"
+        "type": "MILITARY",
+        "latitude": 39.7837304,
+        "longitude": -100.445882
     }
 ]
+```
 
 Pemetaan ID Organisasi:
 - 4070 - Army (Angkatan Darat)
