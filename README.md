@@ -84,8 +84,8 @@ Bot ini akan secara otomatis membuat data identitas, menghasilkan dokumen sertif
 
 ### 1. Clone Repository
 
-git clone https://github.com/PastKing/tgbot-verify.git  
-cd tgbot-verify
+git clone https://github.com/aliahmadnawawi/nungbot-verify.git  
+cd nungbot-verify
 
 ### 2. Install Dependensi
 
